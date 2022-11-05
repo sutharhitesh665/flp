@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#grad-anim {
+	background: linear-gradient(-45deg, #ece6e5, #fcc1d5, #d0daf1, #fdd4ad);
+	animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+/* Hamburger */
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+
+  
+.ham6 .top {
+    stroke-dasharray: 40 172;
+  }
+  .ham6 .middle {
+    stroke-dasharray: 40 111;
+  }
+  .ham6 .bottom {
+    stroke-dasharray: 40 172;
+  }
+  .ham6.active .top {
+    stroke-dashoffset: -132px;
+  }
+  .ham6.active .middle {
+    stroke-dashoffset: -71px;
+  }
+  .ham6.active .bottom {
+    stroke-dashoffset: -132px;
+  }
+
+
+
+  /* Morphing text on Hero */
+
+  
+  .word {
+    animation: word 6s infinite ease-in-out;
+  }
+  .word:nth-child(1) {
+    animation-delay: -6s;
+  }
+  .word:nth-child(2) {
+    animation-delay: -4s;
+  }
+  .word:nth-child(3) {
+    animation-delay: -2s;
+  }
+  
+  @keyframes word {
+    0%, 5%, 100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+    20%, 80% {
+      filter: blur(0.5em);
+      opacity: 0;
+    }
+  }
