@@ -1,2 +1,0 @@
-# flp
-Lance Project
